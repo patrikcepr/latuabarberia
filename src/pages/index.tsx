@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.scss";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home = () => {
     return (
         <>
             <Head>
@@ -17,4 +17,6 @@ export default function Home() {
             <main className={styles.main}></main>
         </>
     );
-}
+};
+
+export default Home;
