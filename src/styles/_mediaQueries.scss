@@ -1,0 +1,42 @@
+$tablet: 576px;
+$smallscreen: 768px;
+$notebook: 992px;
+$desktop: 1200px; // 1296px
+$desktop-hd: 1440px;
+$k2k: 2560px;
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin smallscreen {
+    @media (min-width: $smallscreen) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media (min-width: $notebook) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-hd {
+    @media (min-width: $desktop-hd) {
+        @content;
+    }
+}
+
+@mixin k2k {
+    @media (min-width: $k2k) {
+        @content;
+    }
+}
