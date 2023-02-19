@@ -1,3 +1,73 @@
 {
-    "extends": ["@golemio/lint-config-frontend", "next/core-web-vitals"]
+    "root": true,
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx"]
+            }
+        }
+    },
+    "plugins": ["@typescript-eslint", "simple-import-sort", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "next/core-web-vitals",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "max-len": [
+            "error",
+            {
+                "ignorePattern": "^import .*?,.*?\\{.*?\\}|^import \\{|^export ",
+                "ignoreUrls": true,
+                "code": 130 // Should match with .prettier.json
+            }
+        ],
+        "no-nested-ternary": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "quotes": "off",
+        "react/display-name": "off",
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": ["arrow-function", "function-declaration"]
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".ts", ".tsx", ".js", ".jsx"]
+            }
+        ],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn"
+    }
 }
