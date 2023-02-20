@@ -1,9 +1,11 @@
+import { Typography } from "@mui/material";
+import { Satisfy } from "@next/font/google";
 import Head from "next/head";
 
-// import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
 
-// const inter = Inter({ subsets: ["latin"] });
+// const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"] });
+const satisfy = Satisfy({ weight: ["400"], subsets: ["latin"] });
 
 const Home = () => {
     return (
@@ -14,7 +16,11 @@ const Home = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles.main}></main>
+            <main className={styles.main}>
+                <Typography variant="h1" style={satisfy.style}>
+                    La tua Barberia
+                </Typography>
+            </main>
         </>
     );
 };
