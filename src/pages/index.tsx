@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { Satisfy } from "@next/font/google";
 import Head from "next/head";
 
+import NavBar from "@/components/NavBar";
 import styles from "@/styles/Home.module.scss";
 
 // const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"] });
@@ -16,6 +17,9 @@ const Home = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <header>
+                <NavBar />
+            </header>
             <main className={styles.main}>
                 <Typography variant="h1" style={satisfy.style}>
                     La tua Barberia
