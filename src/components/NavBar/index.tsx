@@ -35,16 +35,17 @@ const NavBar = () => {
                         noWrap
                         component="a"
                         href="/"
-                        color={theme.palette.secondary.main}
+                        color={theme.palette.primary.main}
                         sx={{
                             mr: 2,
+                            px: 2,
                             display: { xs: "none", md: "flex" },
                             fontFamily: "Satisfy",
                             fontWeight: 400,
                             textDecoration: "none",
                         }}
                     >
-                        La tua barberia
+                        {`Jennie's barber shop`}
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -54,7 +55,7 @@ const NavBar = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="secondary"
+                            color="primary"
                         >
                             <MenuIcon />
                         </IconButton>
@@ -80,7 +81,7 @@ const NavBar = () => {
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography
                                         textAlign="center"
-                                        color={theme.palette.secondary.main}
+                                        color={theme.palette.primary.main}
                                         style={{ textDecoration: "none" }}
                                     >
                                         {page}
@@ -94,9 +95,10 @@ const NavBar = () => {
                         noWrap
                         component="a"
                         href=""
-                        color={theme.palette.secondary.main}
+                        color={theme.palette.primary.main}
                         sx={{
                             mr: 2,
+                            px: 2,
                             display: { xs: "flex", md: "none" },
                             flexGrow: 1,
                             fontFamily: "Satisfy",
@@ -105,12 +107,12 @@ const NavBar = () => {
                             textTransform: "none",
                         }}
                     >
-                        La tua barberia
+                        {`Jennie's barber shop`}
                     </Typography>
                     <Box
                         sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
                         justifyContent="flex-end"
-                        // color={theme.palette.secondary.main}
+                        color={theme.palette.primary.main}
                     >
                         {pages.map((page) => (
                             <Button
