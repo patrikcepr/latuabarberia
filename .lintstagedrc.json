@@ -1,0 +1,7 @@
+{
+    "*.css": "stylelint --fix",
+    "*.scss": ["yarn stylelint --customSyntax postcss-scss --fix"],
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.js": ["eslint --fix", "prettier --write"],
+    "*.json": "prettier --write"
+}
