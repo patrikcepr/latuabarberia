@@ -25,6 +25,7 @@ const Home = () => {
                             className={`${styles["skewed-text"]} ${styles["json-newline"]}`}
                         >
                             {`Jennie's \nBarbershop`}
+                        <Typography variant="h3" component="h1" style={satisfy.style} color="primary">
                         </Typography>
                     </Box>
                 </Container>
