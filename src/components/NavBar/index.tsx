@@ -45,7 +45,7 @@ const NavBar = () => {
                             textDecoration: "none",
                         }}
                     >
-                        {`Jennie's barber shop`}
+                        {`Jennie's Barbershop`}
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -107,7 +107,7 @@ const NavBar = () => {
                             textTransform: "none",
                         }}
                     >
-                        {`Jennie's barber shop`}
+                        {`Jennie's Barbershop`}
                     </Typography>
                     <Box
                         sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
