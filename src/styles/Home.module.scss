@@ -1,9 +1,8 @@
-.main {
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: aquamarine;
+.skewed-text {
+    transform: rotate(-12.16deg);
+}
+
+.json-newline {
+    white-space: pre-line;
+    vertical-align: bottom;
 }
