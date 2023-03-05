@@ -1,7 +1,10 @@
 /* eslint-disable max-len */
-import { Box, Container, Grid, Typography } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import { Satisfy } from "@next/font/google";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import NavBar from "@/components/NavBar";
 import Text from "@/cs.json";
@@ -27,6 +30,8 @@ const galleryList = [
 ];
 
 const Home = () => {
+    const router = useRouter();
+
     return (
         <>
             <header>
@@ -182,6 +187,18 @@ const Home = () => {
                                 <Typography variant="h6" sx={{ padding: "2rem 0" }}>
                                     {Text.priceList.beverage}
                                 </Typography>
+                                <Grid textAlign="center">
+                                    <Button
+                                        variant="outlined"
+                                        color="primary"
+                                        size="large"
+                                        endIcon={<SendIcon />}
+                                        sx={{ width: "fit-content" }}
+                                        onClick={() => router.push("https://booking.reservanto.cz/Modal/?id=19873")}
+                                    >
+                                        Rezervace online
+                                    </Button>
+                                </Grid>
                             </Box>
                         </Container>
                     </Box>
@@ -277,6 +294,21 @@ const Home = () => {
                                     >
                                         {Text.contact.location.address}
                                     </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={{ xs: 1, lg: 2 }} columns={12}>
+                                <Grid item xs={12} lg={5} sx={{ textAlign: { xs: "center", lg: "right" } }}>
+                                    <Typography component={"span"}>
+                                        <Link href={`mailto:${Text.contact.email}`}>e-mail: {Text.contact.email}</Link>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs sx={{ textAlign: { xs: "center", lg: "center" } }}>
+                                    <Link href={`tel:${Text.contact.tel.replace(/\s/g, "")}`}>
+                                        <Typography component={"span"}>tel.: {Text.contact.tel}</Typography>
+                                    </Link>
+                                </Grid>
+                                <Grid item xs={12} lg={5} sx={{ textAlign: { xs: "center", lg: "left" } }}>
+                                    <Typography component={"span"}>ičo: {Text.contact.ico}</Typography>
                                 </Grid>
                             </Grid>
                         </Container>

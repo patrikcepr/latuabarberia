@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme } from "@mui/material/styles";
+// import { useTheme } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { MouseEvent, useState } from "react";
@@ -19,7 +19,7 @@ const pages = [
 ];
 
 const NavBar = () => {
-    const theme = useTheme();
+    // const theme = useTheme();
 
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
@@ -40,7 +40,7 @@ const NavBar = () => {
                         noWrap
                         component="a"
                         href="#aboutus"
-                        color={theme.palette.primary.main}
+                        color="primary"
                         sx={{
                             mr: 2,
                             px: 2,
@@ -84,11 +84,7 @@ const NavBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                    <Typography
-                                        textAlign="center"
-                                        color={theme.palette.primary.main}
-                                        style={{ textDecoration: "none" }}
-                                    >
+                                    <Typography textAlign="center" color="primary" style={{ textDecoration: "none" }}>
                                         <a href={page.link}>{page.name}</a>
                                     </Typography>
                                 </MenuItem>
@@ -100,7 +96,7 @@ const NavBar = () => {
                         noWrap
                         component="a"
                         href=""
-                        color={theme.palette.primary.main}
+                        color="primary"
                         sx={{
                             mr: 2,
                             px: 2,
@@ -114,11 +110,7 @@ const NavBar = () => {
                     >
                         {`Jennie's Barbershop`}
                     </Typography>
-                    <Box
-                        sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-                        justifyContent="flex-end"
-                        color={theme.palette.primary.main}
-                    >
+                    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} justifyContent="flex-end" color="primary">
                         {pages.map((page) => (
                             <Button
                                 key={page.name}
