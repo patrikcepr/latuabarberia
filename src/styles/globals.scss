@@ -1,1 +1,18 @@
 @import "./typography";
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #cd7f32;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+    }
+
+    &:visited {
+        color: #cd7f32aa;
+    }
+}

@@ -19,8 +19,8 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: Mu
     return (
         <CacheProvider value={emotionCache}>
             <Head>
-                <title>Jennie&apos;s barber shop</title>
-                <meta name="description" content="Jennie's barber shop" />
+                <title>Jennie&apos;s barbershop</title>
+                <meta name="description" content="Jennie's barbershop" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
