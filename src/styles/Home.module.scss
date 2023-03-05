@@ -1,8 +1,141 @@
-.skewed-text {
-    transform: rotate(-12.16deg);
+@import "./variables";
+
+$image: "/assets/images/IMG_5726.jpg";
+$image-desktop: "/assets/images/IMG_5641.jpg";
+$image-contact-desktop: "/assets/images/IMG_5661.jpg";
+$icon-bowtie: "/assets/images/bowtie_single.svg";
+
+.aboutus-container {
+    min-height: 464px;
+    height: 100%;
+    position: relative;
+    box-shadow: 4px 4px 100px 15px rgb(205 127 50 / 20%);
+
+    @include notebook {
+        min-height: 857px;
+    }
+
+    &::before {
+        content: "";
+        background: center / 100% no-repeat no-repeat url($image);
+        background-size: cover;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        @include notebook {
+            background: center / 100% no-repeat no-repeat url($image-desktop);
+            background-size: cover;
+            opacity: 0.2;
+        }
+    }
+
+    .aboutus-text {
+        position: relative;
+
+        &::before {
+            content: "";
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .aboutus-image {
+        border: 12px solid #053e69;
+        box-shadow: 4px 4px 100px 15px rgb(205 127 50 / 20%);
+    }
 }
 
-.json-newline {
-    white-space: pre-line;
-    vertical-align: bottom;
+.jennies-heading {
+    @include json-newline;
+
+    transform: rotate(-12.16deg) skew(-0.02turn, 1deg);
+    text-shadow: -1px 1px 0 white;
+    filter: drop-shadow(1px 1px 1.75rem black);
+}
+
+.text-decor {
+    position: relative;
+
+    &::before {
+        content: url($icon-bowtie);
+        opacity: 0.2;
+        fill: #fff;
+        width: 2rem;
+        transform: scale(1.75);
+        position: absolute;
+        left: 50%;
+        top: -2rem;
+    }
+}
+
+.pricelist-container {
+    background: #053e69;
+
+    @include notebook {
+        background: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 105 / 43%) 99.71%);
+    }
+}
+
+.gallery-container {
+    background: rgb(205 127 50 / 20%);
+
+    @include notebook {
+        background: #053e69;
+    }
+
+    img {
+        border: 9px solid #cd7f32;
+        width: 100%;
+        height: auto;
+        min-height: 256px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.3) rotate(-1.5deg);
+            filter: saturate(1.2);
+            box-shadow: 0 5px 70px #0007;
+        }
+
+        @include tablet {
+            min-height: 336px;
+        }
+    }
+}
+
+.contact-container {
+    min-height: 464px;
+    height: 100%;
+    position: relative;
+
+    a {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &::before {
+        content: "";
+        background: center / 100% no-repeat no-repeat url($image-contact-desktop);
+        background-size: cover;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        @include notebook {
+            background: center / 100% no-repeat no-repeat url($image-contact-desktop);
+            background-size: cover;
+            opacity: 0.2;
+        }
+    }
 }
