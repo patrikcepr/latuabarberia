@@ -1,5 +1,9 @@
 @import "./typography";
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     color: #cd7f32;
     text-decoration: none;

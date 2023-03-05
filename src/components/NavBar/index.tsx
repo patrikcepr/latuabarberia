@@ -12,10 +12,10 @@ import Typography from "@mui/material/Typography";
 import React, { MouseEvent, useState } from "react";
 
 const pages = [
-    { name: "O nás", link: "/" },
+    { name: "O nás", link: "#aboutus" },
     { name: "Ceník", link: "#pricelist" },
     { name: "Galerie", link: "#gallery" },
-    { name: "Kontakt", link: "contact" },
+    { name: "Kontakt", link: "#contact" },
 ];
 
 const NavBar = () => {
@@ -32,14 +32,14 @@ const NavBar = () => {
     };
 
     return (
-        <AppBar component="nav" position="static">
+        <AppBar component="nav" position="fixed">
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
+                        href="#aboutus"
                         color={theme.palette.primary.main}
                         sx={{
                             mr: 2,

@@ -2,6 +2,7 @@
 
 $image: "/assets/images/IMG_5726.jpg";
 $image-desktop: "/assets/images/IMG_5641.jpg";
+$image-contact-desktop: "/assets/images/IMG_5661.jpg";
 
 .aboutus-container {
     min-height: 464px;
@@ -27,7 +28,7 @@ $image-desktop: "/assets/images/IMG_5641.jpg";
         @include notebook {
             background: center / 100% no-repeat no-repeat url($image-desktop);
             background-size: cover;
-            opacity: 0.3;
+            opacity: 0.2;
         }
     }
 
@@ -36,7 +37,6 @@ $image-desktop: "/assets/images/IMG_5641.jpg";
 
         &::before {
             content: "";
-            background: linear-gradient(180deg, rgb(5 62 105 / 70%) 0%, rgb(5 62 105 / 93%) 99.71%);
             opacity: 0.4;
             position: absolute;
             top: 0;
@@ -60,6 +60,19 @@ $image-desktop: "/assets/images/IMG_5641.jpg";
     filter: drop-shadow(1px 1px 1.75rem black);
 }
 
+.text-decor {
+    position: relative;
+
+    &::before {
+        content: "\201c";
+        opacity: 0.1;
+        font-size: 8rem;
+        position: absolute;
+        left: 50%;
+        top: -60px;
+    }
+}
+
 .pricelist-container {
     background: #053e69;
 
@@ -71,11 +84,49 @@ $image-desktop: "/assets/images/IMG_5641.jpg";
 .gallery-container {
     background: rgb(205 127 50 / 20%);
 
-    .image-frame {
-        position: relative;
-        width: 100%;
-        height: 300px;
+    @include notebook {
+        background: #053e69;
+    }
+
+    img {
         border: 9px solid #cd7f32;
-        object-fit: cover;
+        width: 100%;
+        height: auto;
+        min-height: 256px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.3) rotate(3deg);
+            filter: saturate(1.2);
+            box-shadow: 0 5px 70px #0007;
+        }
+
+        @include tablet {
+            min-height: 336px;
+        }
+    }
+}
+
+.contact-container {
+    min-height: 464px;
+    height: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: center / 100% no-repeat no-repeat url($image-contact-desktop);
+        background-size: cover;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        @include notebook {
+            background: center / 100% no-repeat no-repeat url($image-contact-desktop);
+            background-size: cover;
+            opacity: 0.2;
+        }
     }
 }
