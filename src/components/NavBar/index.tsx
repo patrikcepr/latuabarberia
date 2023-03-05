@@ -11,7 +11,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { MouseEvent, useState } from "react";
 
-const pages = ["O nás", "Ceník", "Galerie"];
+const pages = [
+    { name: "O nás", link: "/" },
+    { name: "Ceník", link: "#pricelist" },
+    { name: "Galerie", link: "#gallery" },
+    { name: "Kontakt", link: "contact" },
+];
 
 const NavBar = () => {
     const theme = useTheme();
@@ -78,13 +83,13 @@ const NavBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                                     <Typography
                                         textAlign="center"
                                         color={theme.palette.primary.main}
                                         style={{ textDecoration: "none" }}
                                     >
-                                        {page}
+                                        <a href={page.link}>{page.name}</a>
                                     </Typography>
                                 </MenuItem>
                             ))}
@@ -116,11 +121,11 @@ const NavBar = () => {
                     >
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.name}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, display: "block", textTransform: "none" }}
                             >
-                                {page}
+                                <a href={page.link}>{page.name}</a>
                             </Button>
                         ))}
                     </Box>

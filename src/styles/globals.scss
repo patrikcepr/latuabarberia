@@ -1,1 +1,10 @@
 @import "./typography";
+
+a {
+    color: #cd7f32;
+    text-decoration: none;
+
+    &:visited {
+        color: #cd7f32aa;
+    }
+}

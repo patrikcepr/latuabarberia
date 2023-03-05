@@ -1,0 +1,16 @@
+{
+    "title": "Jennie's \nBarbershop",
+    "aboutUs": {
+        "aboutPointOne": "Každý muž by si měl dopřát chvilku pro sebe a užít si pocitu být opečováván.",
+        "aboutPointTwo": "Vytvořili jsme příjemné místo, kde stříhají a holí pouze ženy.",
+        "aboutPointThree": "Své klienty si přímo hýčkáme, nejen kvalitní prací, jenž vychází z lásky k řemeslu, ale především přátelským přístupem ke každému klientovi, kterému věnujeme maximum našeho času.",
+        "aboutPointFour": "Budete odcházet ne jen s perfektním střihem, ale i s úsměvem na tváři."
+    },
+    "priceList": {
+        "title": "Ceník",
+        "beverage": "Ke každé službě je v ceně káva, voda, limo či něco ostřejšího."
+    },
+    "contact": {
+        "title": "Galerie"
+    }
+}
