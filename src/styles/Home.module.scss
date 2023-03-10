@@ -1,9 +1,24 @@
 @import "./variables";
 
 $image: "/assets/images/IMG_5726.jpg";
-$image-desktop: "/assets/images/IMG_5641.jpg";
+$image-desktop: "/assets/images/IMG_5529.jpg";
 $image-contact-desktop: "/assets/images/IMG_5661.jpg";
 $icon-bowtie: "/assets/images/bowtie_single.svg";
+$dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 105 / 43%) 99.71%);
+
+.logo-frame {
+    left: 0;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+        padding: 0.5rem;
+
+        @include notebook {
+            height: 16rem;
+        }
+    }
+}
 
 .aboutus-container {
     min-height: 464px;
@@ -57,7 +72,8 @@ $icon-bowtie: "/assets/images/bowtie_single.svg";
     @include json-newline;
 
     transform: rotate(-12.16deg) skew(-0.02turn, 1deg);
-    text-shadow: -1px 1px 0 white;
+
+    // text-shadow: -1px 1px 0 white;
     filter: drop-shadow(1px 1px 1.75rem black);
 }
 
@@ -77,22 +93,23 @@ $icon-bowtie: "/assets/images/bowtie_single.svg";
 }
 
 .pricelist-container {
-    background: #053e69;
+    background: $dark-blue-gradient;
 
     @include notebook {
-        background: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 105 / 43%) 99.71%);
+        background: $dark-blue-gradient;
     }
 }
 
 .gallery-container {
     background: rgb(205 127 50 / 20%);
+    background: $dark-blue-gradient;
 
     @include notebook {
-        background: #053e69;
+        background: $dark-blue-gradient;
     }
 
     img {
-        border: 9px solid #cd7f32;
+        border: 9px solid #fff;
         width: 100%;
         height: auto;
         min-height: 256px;

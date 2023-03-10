@@ -1,5 +1,5 @@
 {
-    "title": "Jennie's \nBarbershop",
+    "title": "Jannie's \nBarbershop",
     "aboutUs": {
         "aboutPointOne": "Každý muž by si měl dopřát chvilku pro sebe a užít si pocitu být opečováván.",
         "aboutPointTwo": "Vytvořili jsme příjemné místo, kde stříhají a holí pouze ženy.",
@@ -17,7 +17,7 @@
         "title": "Kontakt",
         "openingHours": {
             "title": "Otevírací doba:",
-            "hours": "pondělí až pátek: 10:00 - 19:00 \nobota, neděle \na mimo pracovní dobu \ndle domluvy \n   "
+            "hours": "pondělí až pátek: 10:00 - 19:00 \nsobota, neděle \na mimo pracovní dobu \ndle domluvy \n   "
         },
         "location": {
             "title": "Adresa:",
