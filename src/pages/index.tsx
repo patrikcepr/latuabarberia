@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import SendIcon from "@mui/icons-material/Send";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import { Satisfy } from "@next/font/google";
+// import { Satisfy } from "@next/font/google";
+// import { Tangerine } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -16,9 +17,11 @@ import galImg01 from "@/images/IMG_5639_thumb.png";
 import galImg05 from "@/images/IMG_5648_thumb.png";
 import { priceList } from "@/priceList";
 
+import logo from "../../public/assets/images/logo.png";
 import styles from "../styles/Home.module.scss";
 
-const satisfy = Satisfy({ weight: ["400"], subsets: ["latin"] });
+// const satisfy = Satisfy({ weight: ["400"], subsets: ["latin"] });
+// const tangerine = Tangerine({ weight: ["400"], subsets: ["latin"] });
 
 const galleryList = [
     { url: galImg01, alt: "gallery one" },
@@ -47,18 +50,23 @@ const Home = () => {
                         className={styles["aboutus-container"]}
                     >
                         <Grid item container xs={12} lg={8} sx={{ height: "100%", gap: "4rem" }}>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} textAlign="center">
+                                <div className={styles["logo-frame"]}>
+                                    <Image src={logo} alt="jannies barber logo" />
+                                </div>
+                            </Grid>
+                            {/* <Grid item xs={12}>
                                 <Typography
-                                    variant="h2"
+                                    variant="h1"
                                     component="h1"
-                                    style={satisfy.style}
+                                    style={tangerine.style}
                                     color="primary"
                                     textAlign={"center"}
                                     className={`${styles["jennies-heading"]}`}
                                 >
                                     {Text.title}
                                 </Typography>
-                            </Grid>
+                            </Grid> */}
                             <Grid
                                 item
                                 sx={{
@@ -70,40 +78,16 @@ const Home = () => {
                                 rowGap={3}
                                 className={styles["aboutus-text"]}
                             >
-                                <Typography
-                                    variant="h6"
-                                    component="h3"
-                                    color="white"
-                                    textAlign="center"
-                                    className={styles["text-decor"]}
-                                >
+                                <Typography variant="h6" component="h3" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointOne}
                                 </Typography>
-                                <Typography
-                                    variant="h6"
-                                    component="h3"
-                                    color="white"
-                                    textAlign="center"
-                                    className={styles["text-decor"]}
-                                >
+                                <Typography variant="h6" component="h3" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointTwo}
                                 </Typography>
-                                <Typography
-                                    variant="h6"
-                                    component="h3"
-                                    color="white"
-                                    textAlign="center"
-                                    className={styles["text-decor"]}
-                                >
+                                <Typography variant="h6" component="h3" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointThree}
                                 </Typography>
-                                <Typography
-                                    variant="h6"
-                                    component="h3"
-                                    color="white"
-                                    textAlign="center"
-                                    className={styles["text-decor"]}
-                                >
+                                <Typography variant="h6" component="h3" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointFour}
                                 </Typography>
                             </Grid>

@@ -11,6 +11,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { MouseEvent, useState } from "react";
 
+// import Text from "@/cs.json";
+// import logo from "../../../public/assets/images/logo.png";
+
 const pages = [
     { name: "O nás", link: "#aboutus" },
     { name: "Ceník", link: "#pricelist" },
@@ -35,23 +38,24 @@ const NavBar = () => {
         <AppBar component="nav" position="fixed">
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="#aboutus"
-                        color="primary"
-                        sx={{
-                            mr: 2,
-                            px: 2,
-                            display: { xs: "none", md: "flex" },
-                            fontFamily: "Satisfy",
-                            fontWeight: 400,
-                            textDecoration: "none",
-                        }}
-                    >
-                        {`Jennie's Barbershop`}
-                    </Typography>
+                    <div>
+                        {/* <Typography
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="#aboutus"
+                            sx={{
+                                mr: 2,
+                                px: 2,
+                                display: { xs: "none", md: "flex" },
+                                fontFamily: "Roboto",
+                                fontWeight: 400,
+                                textDecoration: "none",
+                            }}
+                        >
+                            {Text.title}
+                        </Typography> */}
+                    </div>
 
                     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                         <IconButton
@@ -60,7 +64,6 @@ const NavBar = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="primary"
                         >
                             <MenuIcon />
                         </IconButton>
@@ -84,33 +87,38 @@ const NavBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center" color="primary" style={{ textDecoration: "none" }}>
+                                    <Typography textAlign="center" color="#fff" style={{ textDecoration: "none" }}>
                                         <a href={page.link}>{page.name}</a>
                                     </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        color="primary"
-                        sx={{
-                            mr: 2,
-                            px: 2,
-                            display: { xs: "flex", md: "none" },
-                            flexGrow: 1,
-                            fontFamily: "Satisfy",
-                            fontWeight: 400,
-                            textDecoration: "none",
-                            textTransform: "none",
-                        }}
-                    >
-                        {`Jennie's Barbershop`}
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} justifyContent="flex-end" color="primary">
+                    <div>
+                        {/* <div className={styles["logo-frame"]}>
+                            <Image src={logo} alt="jannies barber logo" />
+                        </div> */}
+                        {/* <Typography
+                            variant="h5"
+                            noWrap
+                            component="a"
+                            href=""
+                            color="#fff"
+                            sx={{
+                                mr: 2,
+                                px: 2,
+                                display: { xs: "flex", md: "none" },
+                                flexGrow: 1,
+                                fontFamily: "Satisfy",
+                                fontWeight: 400,
+                                textDecoration: "none",
+                                textTransform: "none",
+                            }}
+                        >
+                            {Text.title}
+                        </Typography> */}
+                    </div>
+                    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} justifyContent="flex-end" color="#fff">
                         {pages.map((page) => (
                             <Button
                                 key={page.name}

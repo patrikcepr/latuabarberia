@@ -6,6 +6,8 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import PropTypes from "prop-types";
 
+import Text from "@/cs.json";
+
 import darkTheme from "../styles/theme/darkTheme";
 import createEmotionCache from "../utility/createEmotionCache";
 
@@ -19,8 +21,8 @@ const App = ({ Component, emotionCache = clientSideEmotionCache, pageProps }: Mu
     return (
         <CacheProvider value={emotionCache}>
             <Head>
-                <title>Jennie&apos;s barbershop</title>
-                <meta name="description" content="Jennie's barbershop" />
+                <title>{Text.title}</title>
+                <meta name="description" content={Text.title} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
