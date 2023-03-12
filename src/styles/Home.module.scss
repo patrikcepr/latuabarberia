@@ -24,7 +24,7 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
     min-height: 464px;
     height: 100%;
     position: relative;
-    box-shadow: 4px 4px 100px 15px rgb(205 127 50 / 20%);
+    box-shadow: 4px 4px 100px 15px $tertiary-color;
 
     @include notebook {
         min-height: 857px;
@@ -43,7 +43,6 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
 
         @include notebook {
             background: center / 100% no-repeat no-repeat url($image-desktop);
-            background-size: cover;
             opacity: 0.2;
         }
     }
@@ -61,53 +60,17 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
             right: 0;
         }
     }
-
-    .aboutus-image {
-        border: 12px solid #053e69;
-        box-shadow: 4px 4px 100px 15px rgb(205 127 50 / 20%);
-    }
-}
-
-.jennies-heading {
-    @include json-newline;
-
-    transform: rotate(-12.16deg) skew(-0.02turn, 1deg);
-    filter: drop-shadow(1px 1px 1.75rem black);
-}
-
-.text-decor {
-    position: relative;
-
-    &::before {
-        content: url($icon-bowtie);
-        opacity: 0.2;
-        fill: #fff;
-        width: 2rem;
-        transform: scale(1.75);
-        position: absolute;
-        left: 50%;
-        top: -2rem;
-    }
 }
 
 .pricelist-container {
     background: $dark-blue-gradient;
-
-    @include notebook {
-        background: $dark-blue-gradient;
-    }
 }
 
 .gallery-container {
-    background: rgb(205 127 50 / 20%);
     background: $dark-blue-gradient;
 
-    @include notebook {
-        background: $dark-blue-gradient;
-    }
-
     img {
-        border: 9px solid #fff;
+        border: 9px solid $white;
         width: 100%;
         height: auto;
         min-height: 256px;
@@ -116,7 +79,7 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
         &:hover {
             transform: scale(1.3) rotate(-1.5deg);
             filter: saturate(1.2);
-            box-shadow: 0 5px 70px #0007;
+            box-shadow: 0 5px 70px $black-light;
         }
 
         @include tablet {
@@ -146,11 +109,5 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
         left: 0;
         bottom: 0;
         right: 0;
-
-        @include notebook {
-            background: center / 100% no-repeat no-repeat url($image-contact-desktop);
-            background-size: cover;
-            opacity: 0.2;
-        }
     }
 }
