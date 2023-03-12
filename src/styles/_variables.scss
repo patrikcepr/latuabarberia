@@ -2,17 +2,19 @@
 @import "./mediaQueries";
 
 // colors
-$primary-color-light: rgb(92 116 153);
-$primary-color-dark: rgb(0 51 102);
-$secondary-color: rgb(214 26 41);
-$tertiary-color: rgb(255 223 33);
+
+// $primary-color: $white;
+// $primary-color-dark: #90500d;
+// $secondary-color: #053e69;
+// $secondary-color-dark: #002038;
+// $tertiary-color: rgb(255 223 33);
 $black-light: rgb(0 0 0 / 64%);
 $black: rgb(0 0 0);
 $white: rgb(255 255 255);
 $gray-lighter: rgb(0 51 102 / 4%);
 $gray-light: rgb(204 204 204);
-$gray-dark: rgb(102 102 102);
-$grad-gray: linear-gradient(177.42deg, rgb(0 51 102 / 0%) 2.15%, rgb(0 51 102) 97.85%);
+$gray-dark: #666;
+$grad-gray: linear-gradient(177.42deg, rgb(0 51 102 / 0%) 2.15%, #053e69 97.85%);
 $grad-col1: rgba(215 223 231);
 $grad-col2: rgb(234 238 242);
 $grad-col3: rgb(237 240 244);
@@ -22,100 +24,10 @@ $grad-gray3: linear-gradient(224.93deg, rgb(150 170 183 / 5%) -0.12%, rgb(114 13
 $grad-gray-badge: linear-gradient(224.93deg, rgb(150 170 183 / 40%) -0.12%, rgb(114 136 150 / 40%) 100%);
 $background-color: rgb(231 231 231);
 
-@mixin strokes {
-    &_color-primary {
-        stroke: $primary-color-dark;
-    }
-
-    &_color-secondary {
-        stroke: $secondary-color;
-    }
-
-    &_color-tertiary {
-        stroke: $tertiary-color;
-    }
-
-    &_color-black {
-        stroke: $black;
-    }
-}
-
-@mixin fills {
-    &_color-primary {
-        fill: $primary-color-dark;
-    }
-
-    &_color-secondary {
-        fill: $secondary-color;
-    }
-
-    &_color-tertiary {
-        fill: $tertiary-color;
-    }
-
-    &_color-black {
-        fill: $black;
-    }
-}
-
 @mixin direction($deg) {
     transform: rotate($deg);
     transform-box: fill-box;
     transform-origin: center;
-}
-
-// main background
-$main-background: $grad-gray2;
-
-// horizontal line
-@mixin horizontal-line {
-    color: $primary-color-dark;
-    opacity: 0.2;
-    width: 100%;
-}
-
-// shadows
-$shadow-light: 0 5px 5px rgba(0 51 102 / 30%);
-$shadow: rgb(0 0 0 / 25%) 0 4px 4px;
-
-@mixin card-shadow {
-    box-shadow: 0 84px 136px rgb(0 51 102 / 8%), 0 19px 30px rgb(0 51 102 / 4%), 0 5px 9px rgb(0 51 102 / 5%);
-}
-
-@mixin shadow-high {
-    box-shadow: 0 100px 80px rgb(0 0 0 / 13%), 0 41px 33px rgb(0 0 0 / 9%), 0 22px 17px rgb(0 0 0 / 7%),
-        0 12px 10px rgba(0 0 0 / 6%), 0 6px 5px rgb(0 0 0 / 5%), 0 2px 2px rgb(0 0 0 / 3%);
-}
-
-@mixin shadow-inset {
-    box-shadow: inset 0 4px 4px rgb(0 51 102 / 10%);
-}
-
-@mixin scroll-nav-shadow {
-    box-shadow: 0 22px 48px rgb(0 0 0 / 15%), 0 8px 18px rgb(0 0 0 / 11%), 0 4px 9px rgb(0 0 0 / 9%), 0 2px 4px rgb(0 0 0 / 7%),
-        0 1px 2px rgb(0 0 0 / 5%);
-}
-
-// scrollbars
-
-@mixin scrollbars {
-    scrollbar-width: thin;
-    scrollbar-color: rgba($gray-dark, 0.5);
-
-    &::-webkit-scrollbar {
-        width: 0.4rem;
-        height: 0.6rem;
-        opacity: 0.5;
-    }
-
-    &::-webkit-scrollbar-track {
-        background-color: rgba($gray-light, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: rgba($gray-light, 0.3);
-        outline: 1px solid rgba($gray-dark, 0.3);
-    }
 }
 
 // layout
@@ -151,5 +63,3 @@ $border-radius: 4px;
     justify-content: center;
     align-items: center;
 }
-
-// grid

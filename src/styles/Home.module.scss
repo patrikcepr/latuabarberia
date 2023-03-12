@@ -72,8 +72,6 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
     @include json-newline;
 
     transform: rotate(-12.16deg) skew(-0.02turn, 1deg);
-
-    // text-shadow: -1px 1px 0 white;
     filter: drop-shadow(1px 1px 1.75rem black);
 }
 

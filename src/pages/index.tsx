@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import SendIcon from "@mui/icons-material/Send";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-// import { Satisfy } from "@next/font/google";
-// import { Tangerine } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -19,9 +17,6 @@ import { priceList } from "@/priceList";
 
 import logo from "../../public/assets/images/logo.png";
 import styles from "../styles/Home.module.scss";
-
-// const satisfy = Satisfy({ weight: ["400"], subsets: ["latin"] });
-// const tangerine = Tangerine({ weight: ["400"], subsets: ["latin"] });
 
 const galleryList = [
     { url: galImg01, alt: "gallery one" },
