@@ -38,25 +38,6 @@ const NavBar = () => {
         <AppBar component="nav" position="fixed">
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <div>
-                        {/* <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="#aboutus"
-                            sx={{
-                                mr: 2,
-                                px: 2,
-                                display: { xs: "none", md: "flex" },
-                                fontFamily: "Roboto",
-                                fontWeight: 400,
-                                textDecoration: "none",
-                            }}
-                        >
-                            {Text.title}
-                        </Typography> */}
-                    </div>
-
                     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                         <IconButton
                             size="large"
@@ -94,30 +75,6 @@ const NavBar = () => {
                             ))}
                         </Menu>
                     </Box>
-                    <div>
-                        {/* <div className={styles["logo-frame"]}>
-                            <Image src={logo} alt="jannies barber logo" />
-                        </div> */}
-                        {/* <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href=""
-                            color="#fff"
-                            sx={{
-                                mr: 2,
-                                px: 2,
-                                display: { xs: "flex", md: "none" },
-                                flexGrow: 1,
-                                fontFamily: "Satisfy",
-                                fontWeight: 400,
-                                textDecoration: "none",
-                                textTransform: "none",
-                            }}
-                        >
-                            {Text.title}
-                        </Typography> */}
-                    </div>
                     <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }} justifyContent="flex-end" color="#fff">
                         {pages.map((page) => (
                             <Button

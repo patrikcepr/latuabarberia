@@ -55,18 +55,6 @@ const Home = () => {
                                     <Image src={logo} alt="jannies barber logo" />
                                 </div>
                             </Grid>
-                            {/* <Grid item xs={12}>
-                                <Typography
-                                    variant="h1"
-                                    component="h1"
-                                    style={tangerine.style}
-                                    color="primary"
-                                    textAlign={"center"}
-                                    className={`${styles["jennies-heading"]}`}
-                                >
-                                    {Text.title}
-                                </Typography>
-                            </Grid> */}
                             <Grid
                                 item
                                 sx={{
@@ -78,16 +66,16 @@ const Home = () => {
                                 rowGap={3}
                                 className={styles["aboutus-text"]}
                             >
-                                <Typography variant="h6" component="h3" color="white" textAlign="center">
+                                <Typography variant="h5" component="h1" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointOne}
                                 </Typography>
-                                <Typography variant="h6" component="h3" color="white" textAlign="center">
+                                <Typography variant="h6" component="p" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointTwo}
                                 </Typography>
-                                <Typography variant="h6" component="h3" color="white" textAlign="center">
+                                <Typography variant="h6" component="p" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointThree}
                                 </Typography>
-                                <Typography variant="h6" component="h3" color="white" textAlign="center">
+                                <Typography variant="h6" component="p" color="white" textAlign="center">
                                     {Text.aboutUs.aboutPointFour}
                                 </Typography>
                             </Grid>
@@ -109,16 +97,16 @@ const Home = () => {
                                     gap: "4rem",
                                 }}
                             >
-                                <Typography variant="subtitle1" component="h3" color="primary" textAlign="center">
+                                <Typography variant="h5" component="h1" color="primary" textAlign="center">
                                     {Text.aboutUs.aboutPointOne}
                                 </Typography>
-                                <Typography variant="subtitle1" component="h3" color="primary" textAlign="center">
+                                <Typography variant="subtitle1" component="p" color="primary" textAlign="center">
                                     {Text.aboutUs.aboutPointTwo}
                                 </Typography>
-                                <Typography variant="subtitle1" component="h3" color="primary" textAlign="center">
+                                <Typography variant="subtitle1" component="p" color="primary" textAlign="center">
                                     {Text.aboutUs.aboutPointThree}
                                 </Typography>
-                                <Typography variant="subtitle1" component="h3" color="primary" textAlign="center">
+                                <Typography variant="subtitle1" component="p" color="primary" textAlign="center">
                                     {Text.aboutUs.aboutPointFour}
                                 </Typography>
                             </Box>
@@ -151,10 +139,12 @@ const Home = () => {
                                     return (
                                         <Grid key={i} container spacing={2}>
                                             <Grid item xs={12}>
-                                                <Typography variant="h6">{item.name}</Typography>
+                                                <Typography variant="h6" component="p">
+                                                    {item.name}
+                                                </Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={8} lg={9}>
-                                                <Typography variant="subtitle1" color={"#bbb"}>
+                                                <Typography variant="subtitle1" component="p" color={"#bbb"}>
                                                     {item.content}
                                                 </Typography>
                                             </Grid>
@@ -168,7 +158,7 @@ const Home = () => {
                                         </Grid>
                                     );
                                 })}
-                                <Typography variant="h6" sx={{ padding: "2rem 0" }}>
+                                <Typography variant="h6" component="p" sx={{ padding: "2rem 0" }}>
                                     {Text.priceList.beverage}
                                 </Typography>
                                 <Grid textAlign="center">
@@ -253,9 +243,12 @@ const Home = () => {
                                     lg={6}
                                     sx={{ display: "grid", gap: "0.5rem", textAlign: { xs: "center", lg: "left" } }}
                                 >
-                                    <Typography variant="h5">{Text.contact.openingHours.title}</Typography>
+                                    <Typography variant="h5" component={"h3"}>
+                                        {Text.contact.openingHours.title}
+                                    </Typography>
                                     <Typography
                                         variant="h6"
+                                        component="h4"
                                         sx={{ whiteSpace: "pre-line", verticalAlign: "bottom", lineHeight: "2.25rem" }}
                                     >
                                         {Text.contact.openingHours.hours}
@@ -274,6 +267,7 @@ const Home = () => {
                                     <Typography variant="h5">{Text.contact.location.title}</Typography>
                                     <Typography
                                         variant="h6"
+                                        component="h3"
                                         sx={{ whiteSpace: "pre-line", verticalAlign: "bottom", lineHeight: "2.25rem" }}
                                     >
                                         {Text.contact.location.address}
