@@ -1,18 +1,18 @@
-@import "./typography";
+@import "./variables";
 
 html {
     scroll-behavior: smooth;
 }
 
 a {
-    color: #fff;
+    color: $white;
     text-decoration: none;
 
     &:hover {
-        color: white;
+        color: $gray-dark;
     }
 
     &:visited {
-        color: #fff;
+        color: $gray-light;
     }
 }
