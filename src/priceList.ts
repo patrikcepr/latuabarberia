@@ -3,7 +3,7 @@ export const priceList = [
     {
         name: "Střih (Haircut)",
         content: "Sřih, zaholení, mytí, kolínská, styling",
-        price: "580 Kč",
+        price: "600 Kč",
         time: "45 - 60 min.",
     },
     {
