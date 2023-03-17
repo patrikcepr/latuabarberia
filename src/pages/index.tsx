@@ -163,7 +163,7 @@ const Home = () => {
                                         size="large"
                                         endIcon={<SendIcon />}
                                         sx={{ width: "fit-content" }}
-                                        onClick={() => router.push("https://booking.reservanto.cz/Modal/?id=19873")}
+                                        onClick={() => router.push("https://janniesbarber.snippet.myfox.cz")}
                                     >
                                         Rezervace online
                                     </Button>
