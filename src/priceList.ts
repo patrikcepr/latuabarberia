@@ -3,7 +3,7 @@ export const priceList = [
     {
         name: "Střih (Haircut)",
         content: "Sřih, zaholení, mytí, kolínská, styling",
-        price: "600 Kč",
+        price: "650 Kč",
         time: "45 - 60 min.",
     },
     {
@@ -21,7 +21,7 @@ export const priceList = [
     {
         name: "Junior do 12 let (Junior haircut)",
         content: "Střih, mytí, styling",
-        price: "350 Kč",
+        price: "450 Kč",
         time: "30 - 40 min.",
     },
     {
