@@ -47,7 +47,7 @@ const Home = () => {
                         <Grid item container xs={12} lg={8} sx={{ height: "100%", gap: "4rem" }}>
                             <Grid item xs={12} textAlign="center">
                                 <div className={styles["logo-frame"]}>
-                                    <Image src={logo} alt="jannies barber logo" />
+                                    <Image src={logo} alt="Jannie's Barbershop logo" />
                                 </div>
                             </Grid>
                             <Grid
