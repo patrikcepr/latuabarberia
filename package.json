@@ -26,8 +26,8 @@
         "sharp": "^0.33.2"
     },
     "devDependencies": {
-        "@commitlint/cli": "^17.8.1",
-        "@commitlint/config-conventional": "^17.8.1",
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
         "@golemio/lint-config-frontend": "^1.0.0-dev.741512476",
         "@types/node": "^22.8.1",
         "@types/react": "^18.3.12",
