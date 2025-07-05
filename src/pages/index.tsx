@@ -138,13 +138,13 @@ const Home = () => {
                                                     {item.name}
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={12} sm={8} lg={9}>
+                                            <Grid item xs={12} sm={8} lg={8}>
                                                 <Typography variant="subtitle1" component="p" color={"#bbb"}>
                                                     {item.content}
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={5} sm={8} sx={{ display: { sm: "none" } }} />
-                                            <Grid item xs={3} sm={2} lg={1}>
+                                            <Grid item xs={3} sm={2} lg={2}>
                                                 <Typography textAlign={"right"}>{item.price}</Typography>
                                             </Grid>
                                             <Grid item xs={4} sm={2} lg={2}>

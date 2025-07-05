@@ -36,10 +36,7 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
         background-size: cover;
         opacity: 0.4;
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        inset: 0;
 
         @include notebook {
             background: center / 100% no-repeat no-repeat url($image-desktop);
@@ -54,10 +51,7 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
             content: "";
             opacity: 0.4;
             position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            inset: 0;
         }
     }
 }
@@ -105,9 +99,6 @@ $dark-blue-gradient: linear-gradient(180deg, rgb(5 62 105 / 24%) 0%, rgb(5 62 10
         background-size: cover;
         opacity: 0.2;
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        inset: 0;
     }
 }
