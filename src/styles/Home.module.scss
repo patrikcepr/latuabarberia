@@ -1,4 +1,5 @@
-@import "./variables";
+@use "./mediaQueries" as *;
+@use "./variables" as *;
 
 $image: "/assets/images/IMG_5726.jpg";
 $image-desktop: "/assets/images/IMG_5529.jpg";
